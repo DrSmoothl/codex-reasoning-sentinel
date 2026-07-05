@@ -1,0 +1,20 @@
+{
+  "name": "codex-reasoning-sentinel",
+  "interface": {
+    "displayName": "Codex Reasoning Sentinel"
+  },
+  "plugins": [
+    {
+      "name": "reasoning-guard",
+      "source": {
+        "source": "local",
+        "path": "./plugins/reasoning-guard"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

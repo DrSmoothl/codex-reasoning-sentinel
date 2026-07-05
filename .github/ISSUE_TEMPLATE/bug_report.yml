@@ -1,0 +1,38 @@
+name: Bug report
+description: Report a Reasoning Guard issue
+title: "[bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting an issue. Please remove private prompt, path, and repository data before sharing logs or fixtures.
+  - type: input
+    id: codex_surface
+    attributes:
+      label: Codex surface
+      description: CLI, desktop app, IDE extension, or other.
+      placeholder: "Codex desktop app"
+  - type: input
+    id: model
+    attributes:
+      label: Model and reasoning effort
+      placeholder: "gpt-5.5 xhigh"
+  - type: input
+    id: reasoning_tokens
+    attributes:
+      label: reasoning_output_tokens
+      placeholder: "516"
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+  - type: textarea
+    id: fixture
+    attributes:
+      label: Minimal redacted fixture or hook input
+      render: json

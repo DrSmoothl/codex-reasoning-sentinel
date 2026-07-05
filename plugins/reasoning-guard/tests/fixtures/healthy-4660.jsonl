@@ -1,0 +1,2 @@
+{"timestamp":"2026-07-05T14:19:20.000Z","type":"turn_context","payload":{"model":"gpt-5.5","model_reasoning_effort":"xhigh"}}
+{"timestamp":"2026-07-05T14:19:21.000Z","type":"token_count","info":{"last_token_usage":{"input_tokens":20219,"cached_input_tokens":4992,"output_tokens":4739,"reasoning_output_tokens":4660,"total_tokens":24958}}}

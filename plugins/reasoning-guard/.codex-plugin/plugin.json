@@ -1,0 +1,36 @@
+{
+  "name": "reasoning-guard",
+  "version": "0.1.0",
+  "description": "Detect suspicious shallow reasoning turns and add Codex hook guardrails.",
+  "author": {
+    "name": "DrSmoothl",
+    "url": "https://github.com/DrSmoothl"
+  },
+  "homepage": "https://github.com/DrSmoothl/codex-reasoning-sentinel",
+  "repository": "https://github.com/DrSmoothl/codex-reasoning-sentinel",
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "hooks",
+    "reasoning",
+    "guardrails"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Reasoning Guard",
+    "shortDescription": "Warns and retries suspicious low-reasoning Codex turns.",
+    "longDescription": "Reasoning Guard bundles lifecycle hooks that watch Codex transcript token telemetry, request one extra pass on suspicious reasoning-token boundaries, and block risky write tools until a suspect turn is repaired or explicitly bypassed.",
+    "developerName": "DrSmoothl",
+    "category": "Productivity",
+    "capabilities": [
+      "Hooks",
+      "Guardrails",
+      "Local"
+    ],
+    "defaultPrompt": [
+      "Show Reasoning Guard status",
+      "Clear Reasoning Guard state",
+      "Explain the reasoning-token guard"
+    ]
+  }
+}
