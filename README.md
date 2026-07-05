@@ -74,7 +74,7 @@ The hook script reads these optional environment variables:
 
 ```text
 .
-├── marketplace.json
+├── .agents/plugins/marketplace.json
 ├── plugins/
 │   └── reasoning-guard/
 │       ├── .codex-plugin/plugin.json

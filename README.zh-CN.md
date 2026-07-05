@@ -74,7 +74,7 @@ hook 脚本支持这些环境变量：
 
 ```text
 .
-├── marketplace.json
+├── .agents/plugins/marketplace.json
 ├── plugins/
 │   └── reasoning-guard/
 │       ├── .codex-plugin/plugin.json
