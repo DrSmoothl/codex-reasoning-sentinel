@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Added a repeatable Codex 5.5 prompt hotfix helper that strips the final `## Intermediary updates` block and locks future Codex sessions to `gpt-5.5`.
+- Added unit coverage for the prompt hotfix helper.
+
 ## 0.1.0 - 2026-07-05
 
 - Initial public project structure.

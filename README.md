@@ -57,6 +57,19 @@ reasoning-guard: allow
 reasoning-guard: clear
 ```
 
+## Codex 5.5 Prompt Hotfix
+
+Some users have observed repeated shallow `reasoning_output_tokens=516` turns with the default Codex 5.5 base prompt. A local workaround is to write the `gpt-5.5` `base_instructions` from `~/.codex/models_cache.json` to `~/.codex/model-instructions.md` after removing the final `## Intermediary updates` section, then lock `config.toml` to that file and `model = "gpt-5.5"`.
+
+This repository includes a helper for that local hotfix:
+
+```bash
+python3 plugins/reasoning-guard/scripts/apply_codex_55_prompt_hotfix.py --check
+python3 plugins/reasoning-guard/scripts/apply_codex_55_prompt_hotfix.py
+```
+
+The helper does not change Reasoning Guard behavior and does not route requests between models. It only makes the Codex prompt override repeatable and keeps future Codex sessions locked to `gpt-5.5`.
+
 ## Configuration
 
 The hook script reads these optional environment variables:
@@ -80,6 +93,7 @@ The hook script reads these optional environment variables:
 │       ├── .codex-plugin/plugin.json
 │       ├── hooks/hooks.json
 │       ├── scripts/reasoning_guard.py
+│       ├── scripts/apply_codex_55_prompt_hotfix.py
 │       ├── skills/reasoning-guard/SKILL.md
 │       └── tests/fixtures/
 └── docs/
@@ -98,6 +112,12 @@ Run a fixture parse:
 ```bash
 python3 plugins/reasoning-guard/scripts/reasoning_guard.py analyze \
   plugins/reasoning-guard/tests/fixtures/suspect-516.jsonl
+```
+
+Test the Codex 5.5 prompt hotfix helper:
+
+```bash
+python3 -m unittest discover -s plugins/reasoning-guard/tests -p "test_*.py"
 ```
 
 Validate the plugin manifest with the Codex plugin validator when available:
